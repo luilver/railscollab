@@ -119,7 +119,6 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.4)
-    therubyracer-heroku (0.8.1.pre3)
     thinking-sphinx (2.0.5)
       activerecord (>= 3.0.3)
       riddle (>= 1.3.3)
@@ -156,7 +155,6 @@ DEPENDENCIES
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   sqlite3
-  therubyracer-heroku (= 0.8.1.pre3)
   thinking-sphinx (= 2.0.5)
   uglifier
   will_paginate (~> 3.0)
