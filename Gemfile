@@ -23,6 +23,8 @@ gem 'mysql', :require => nil, :group => :mysql
 
 #gem 'immortal', :git => "git://github.com/teambox/immortal.git"
 gem 'choices', :git => "git://github.com/teambox/choices.git"
+gem 'better_errors'
+gem 'binding_of_caller'
 
 group :test do
   gem 'faker'
