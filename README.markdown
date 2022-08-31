@@ -32,7 +32,14 @@ Simply run the following:
 
 And visit [localhost][]
 
-Login using the username `admin`, with the password `password`.
+You should see a login page like this:
+
+<img width="258" alt="image" src="https://user-images.githubusercontent.com/681020/187572700-51a2248e-1990-4e6f-a9ec-448e199593fd.png">
+
+Login using the username `admin`, with the password `password` and you will get a dashboard like this:
+
+<img width="804" alt="image" src="https://user-images.githubusercontent.com/681020/187572795-458adde7-87a8-45cf-9416-30dc541494f0.png">
+
 
 For more advanced setup options, refer to the [INSTALL.markdown] [3] and [UPGRADE.markdown] [4] files
 
