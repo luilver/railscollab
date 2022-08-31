@@ -12,7 +12,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'RedCloth'
 gem 'icalendar'
 gem 'friendly_id', '~> 4.0.0.beta8'
-gem 'acts_as_versioned', :git => "git://github.com/firien/acts_as_versioned.git"
+gem 'acts_as_versioned'
 gem 'jquery-rails', '>= 1.0.12'
 gem 'thinking-sphinx', '2.0.5'
 gem 'mysql', :require => nil, :group => :mysql
@@ -22,9 +22,9 @@ gem 'mysql', :require => nil, :group => :mysql
 #end
 
 #gem 'immortal', :git => "git://github.com/teambox/immortal.git"
-gem 'choices', :git => "git://github.com/teambox/choices.git"
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'choices'
 
 group :test do
   gem 'faker'

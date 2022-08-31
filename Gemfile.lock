@@ -1,17 +1,3 @@
-GIT
-  remote: git://github.com/firien/acts_as_versioned.git
-  revision: f7eaf9b32c030fe46585bc7984de622e7a02bd63
-  specs:
-    acts_as_versioned (0.6.0)
-      activerecord (>= 3.0.0)
-
-GIT
-  remote: git://github.com/teambox/choices.git
-  revision: 93d0cfb4e5fd4ae03b421b379a69ee00721f337b
-  specs:
-    choices (0.2.4)
-      hashie (>= 0.4.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -45,6 +31,9 @@ GEM
       activesupport (= 3.1.0)
     activesupport (3.1.0)
       multi_json (~> 1.0)
+    acts_as_versioned (0.2.3)
+      activerecord (>= 1.10.1)
+      activesupport (>= 1.1.1)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-java)
@@ -56,6 +45,8 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.0.0)
     cancan (1.6.7)
+    choices (0.4.0)
+      hashie (>= 0.4.0)
     cocaine (0.2.0)
     coderay (1.1.0)
     debug_inspector (0.0.2)
@@ -69,7 +60,7 @@ GEM
       i18n (~> 0.4)
     friendly_id (4.0.0.beta12)
     haml (3.1.3)
-    hashie (1.1.0)
+    hashie (5.0.0)
     hike (1.2.1)
     i18n (0.6.0)
     icalendar (1.1.6)
@@ -147,11 +138,11 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  acts_as_versioned!
   better_errors
   binding_of_caller
+  acts_as_versioned
   cancan
-  choices!
+  choices
   dynamic_form
   factory_girl
   faker
