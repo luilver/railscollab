@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  railscollab:
+    build:
+      context: .
+    image: "railscollab:latest"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/railscollab/
