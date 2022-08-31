@@ -354,7 +354,7 @@ ActiveRecord::Schema.define(:version => 20111005191500) do
     t.string   "salt",                      :limit => 13,  :default => "",    :null => false
     t.string   "twister",                   :limit => 10,  :default => "",    :null => false
     t.string   "display_name",              :limit => 50
-    t.string   "title"
+    t.string   "title",                     :limit => 30
     t.string   "office_number",             :limit => 20
     t.string   "fax_number",                :limit => 20
     t.string   "mobile_number",             :limit => 20
@@ -394,8 +394,6 @@ ActiveRecord::Schema.define(:version => 20111005191500) do
     t.integer  "project_id"
     t.integer  "created_by_id"
   end
-
-  add_index "wiki_page_versions", ["wiki_page_id"], :name => "index_wiki_page_versions_on_wiki_page_id"
 
   create_table "wiki_pages", :force => true do |t|
     t.string   "title"

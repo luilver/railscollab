@@ -5,7 +5,7 @@ class Nomoreconfig < ActiveRecord::Migration
   end
 
   def down
-    create_table "config_categories", do |t|
+    create_table "config_categories" do |t|
       t.string  "name",           :limit => 50, :default => "",    :null => false
       t.boolean "is_system",                    :default => false, :null => false
       t.integer "category_order", :limit => 3,  :default => 0,     :null => false
@@ -14,7 +14,7 @@ class Nomoreconfig < ActiveRecord::Migration
     add_index "config_categories", ["category_order"], :name => "index_config_categories_on_category_order"
     add_index "config_categories", ["name"], :name => "index_config_categories_on_name", :unique => true
 
-    create_table "config_options", do |t|
+    create_table "config_options" do |t|
       t.string  "category_name",        :limit => 30, :default => "",    :null => false
       t.string  "name",                 :limit => 50, :default => "",    :null => false
       t.text    "value"
