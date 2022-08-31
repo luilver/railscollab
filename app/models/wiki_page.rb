@@ -2,20 +2,21 @@ class WikiPage < ActiveRecord::Base
   extend FriendlyId
   include Rails.application.routes.url_helpers
   include WikiPageUser
-  
+
   before_save :set_main_page
-  acts_as_versioned :extend => WikiPageUser
+  acts_as_versioned :extend => WikiPageUser,
+    :table_name => :wiki_page_versions
   friendly_id :title, :use => :slugged
   validates_presence_of :title
 
   def title_from_id=(id)
     self.title = id.to_s.underscore.humanize if id
   end
-  
+
   belongs_to :project
-  self.non_versioned_columns << :project_id
-  self.non_versioned_columns << :title
-  self.non_versioned_columns << :slug
+  # self.non_versioned_columns << :project_id
+  # self.non_versioned_columns << :title
+  # self.non_versioned_columns << :slug
   scope :main, lambda{ |project| where(:main => true, :project_id => project.id) }
 
   after_create  :process_create
@@ -45,19 +46,19 @@ class WikiPage < ActiveRecord::Base
   def object_url(host = nil)
     url_for :only_path => host.nil?, :host => host, :controller => 'wiki_pages', :action => 'show', :id => self, :active_project => project_id
   end
-  
+
   # Indexing
   define_index do
     indexes :title
     indexes :content
-    
+
     has :project_id
     has :created_at
     has :updated_at
   end
 
   protected
-  
+
   def main_page
     @main_page ||= WikiPage.main(project).first
   end
