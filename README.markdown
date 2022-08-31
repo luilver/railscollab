@@ -28,9 +28,11 @@ whose access can be restricted to certain elements of the project.
 
 Simply run the following:
 
-    script/setup
+    docker-compose up
 
-And login using the username `admin`, with the password `password`.
+And visit [localhost][]
+
+Login using the username `admin`, with the password `password`.
 
 For more advanced setup options, refer to the [INSTALL.markdown] [3] and [UPGRADE.markdown] [4] files
 
@@ -52,3 +54,5 @@ For licensing details, refer to the [LICENSE] [6] file in the root directory.
 [4]: UPGRADE.markdown
 [5]: http://www.opensourcerails.com/projects/111-RailsCollab
 [6]: LICENSE
+
+[localhost]: http://localhost:3000
